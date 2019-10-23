@@ -44,10 +44,10 @@
                 <multicast-port>54327</multicast-port>
             </multicast>
             <tcp-ip enabled="true">
-                <interface>{{ hostvars[inventory_hostname]['ansible_' + hazelcast_iface]['ipv4']['address'] }}</interface>
+                <interface>{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}</interface>
                 <member-list>
 {% for host in groups[hazelcast_group_name] %}
-                    <member>{{ hostvars[host]['ansible_' + hostvars[host]['hazelcast_iface']]['ipv4']['address'] }}</member>
+                    <member>{{ hostvars[host]['ansible_default_ipv4']['address'] }}</member>
 {% endfor %}
                 </member-list>
             </tcp-ip>

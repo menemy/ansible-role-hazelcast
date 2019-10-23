@@ -1,3 +1,2 @@
 hazelcast_mancenter_url: "http://localhost:8080/mancenter"
 hazelcast_group_name: hazelcast
-hazelcast_iface: eth0
